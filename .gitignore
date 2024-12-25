@@ -1,3 +1,30 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+/.phpunit.cache
+/node_modules
+/public/build
+/public/hot
+/public/storage
+/storage/*.key
+/vendor
+.env
+.env.backup
+.env.production
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+auth.json
+npm-debug.log
+yarn-error.log
+/.fleet
+/.idea
+/.vscode
+=======
+=======
+>>>>>>> e729c83b1e283119d6f57e002ed0314547355bfd
+=======
+>>>>>>> e729c83b1e283119d6f57e002ed0314547355bfd
 /vendor/
 node_modules/
 npm-debug.log
@@ -21,10 +48,10 @@ Homestead.yaml
 Homestead.json
 /.vagrant
 .phpunit.result.cache
-
-/public/build
-/storage/pail
-.env.backup
-.env.production
-.phpactor.json
-auth.json
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> e729c83b1e283119d6f57e002ed0314547355bfd
+=======
+>>>>>>> e729c83b1e283119d6f57e002ed0314547355bfd
+=======
+>>>>>>> e729c83b1e283119d6f57e002ed0314547355bfd

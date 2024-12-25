@@ -1,0 +1,21 @@
+{
+    "private": true,
+    "type": "module",
+    "devDependencies": {
+        "axios": "^1.6.4",
+        "laravel-mix": "^6.0.49",
+        "laravel-vite-plugin": "^1.0.0",
+        "ts-loader": "^9.5.1",
+        "typescript": "^5.7.2"
+    },
+    "dependencies": {
+        "@ag-grid-community/client-side-row-model": "^32.3.3",
+        "@ag-grid-community/core": "^32.3.3",
+        "@ag-grid-enterprise/column-tool-panel": "^32.3.3",
+        "@ag-grid-enterprise/excel-export": "^32.3.3",
+        "@ag-grid-enterprise/filter-tool-panel": "^32.3.3",
+        "@ag-grid-enterprise/menu": "^32.3.3",
+        "@ag-grid-enterprise/set-filter": "^32.3.3",
+        "ag-grid-enterprise": "^32.3.3"
+    }
+}
