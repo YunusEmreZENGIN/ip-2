@@ -13,7 +13,7 @@ Burda ise bantların toplam verimliliği ve kalite kontrolden gelen verilerin ka
 ## Adet Raporu
 <p align="center"><a href="#" target="_blank"><img src="https://github.com/YunusEmreZENGIN/ip-2/blob/main/images/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202025-01-03%20123816.png" width="800" height="400" alt="Anasayfa"></a></p>
 <p align="center"><a href="#" target="_blank"><img src="https://github.com/YunusEmreZENGIN/ip-2/blob/main/images/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202025-01-03%20123824.png" width="800" height="400" alt="Anasayfa"></a></p>
-Adet Raporu sayfasındada resimlerde gördüğünüz gibi roverlardan gelen verileri rapor olarak tutan bir sayfa yapısı bulunmaktadır.
+Adet Raporu sayfasındada resimlerde gördüğünüz gibi roverlardan gelen verileri rapor olarak gösteren bir sayfa yapısı bulunmaktadır.
 Sayfanın Sağından columns kısmından isterseniz columnları kapatıp açabilir istersenin sağdaki direk column yöneticisini 2 kere tıkladığınızda kapatabilirsiniz.Columnsun altındaki filters kısmından yada column adlarının yanında bulunan filterele ikonuyla filtreleme yapabilirsiniz.Ayrıca 2.resimde göründüğü gibi tablonun alt kısmında ne kadar kayıt olduğunu ve sağ altta bulunan toplam adet sayısını görebilirsiniz.
 
 ## Verim İzleme
@@ -21,7 +21,7 @@ Sayfanın Sağından columns kısmından isterseniz columnları kapatıp açabil
 <p align="center"><a href="#" target="_blank"><img src="https://github.com/YunusEmreZENGIN/ip-2/blob/main/images/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202025-01-03%20123838.png" width="800" height="400" alt="Anasayfa"></a></p>
 <p align="center"><a href="#" target="_blank"><img src="https://github.com/YunusEmreZENGIN/ip-2/blob/main/images/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202025-01-03%20123849.png" width="800" height="400" alt="Anasayfa"></a></p>
 
-Verim İzleme sayfasından ise rover cihazlardan gelen verimlilik verilerinin tutulduğu bir sayfadır.Bir önceki adet raporu saydaısındada bahsettiğim gibi burdada column ve filters seçenekleri mevcuttur.Eğer herhangi bir hücreye basarsanız veya Details butonuna basarsanız 2.resimdede göründüğü gibi o hücre satırın bilgileri gelmektedir.Ve ayrıca tablonun alt kısmında ise Toplam o bantta bulunan kişilerin Toplam gün süresini,Toplam gerçekleşen dakika (Makine veya diğer aksaklıklardan çıkılmış süre),Toplam kayıp Zaman ve bantta bulunan kişilerin Toplam ortalama verimliliğini görüntüleyebilirsiniz.
+Verim İzleme sayfasından ise rover cihazlardan gelen verimlilik verilerinin gösterildiği bir sayfadır.Bir önceki adet raporu sayfasındada bahsettiğim gibi burdada column ve filters seçenekleri mevcuttur.Eğer herhangi bir hücreye basarsanız veya Details butonuna basarsanız 2.resimdede göründüğü gibi o hücre satırın bilgileri gelmektedir.Ve ayrıca tablonun alt kısmında ise Toplam o bantta bulunan kişilerin Toplam gün süresini,Toplam gerçekleşen dakika (Makine veya diğer aksaklıklardan çıkılmış süre),Toplam kayıp Zaman ve bantta bulunan kişilerin Toplam ortalama verimliliğini görüntüleyebilirsiniz.
 
 # Uretim-Yonetim-Yazilimi-Projesi
 >>>>>>> e729c83b1e283119d6f57e002ed0314547355bfd
