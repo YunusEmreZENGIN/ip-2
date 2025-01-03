@@ -2,8 +2,8 @@ Herkese merhabalar.Bu projemde özellikle emek-yoğun fabrikalarda üretim hatla
 
 ## Anasayfa
 
-<p align="center"><a href="#" target="_blank"><img src="" width="400" alt="Laravel Logo"></a></p>
-![Açıklayıcı Alt Metin](./images/Ekran görüntüsü 2025-01-03 123750.png)
+<p align="center"><a href="#" target="_blank"><img src="https://github.com/YunusEmreZENGIN/ip-2/blob/main/images/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202025-01-03%20123750.png" width="400" alt="Laravel Logo"></a></p>
+
 
 ## Learning Laravel
 
