@@ -1,3 +1,4 @@
+## ZNG-MES ÜRETİM YÖNETİM YAZILIMI
 Herkese merhabalar.Bu projemde özellikle emek-yoğun fabrikalarda üretim hatlarını izleyebilmek,ölçebilmek,analiz edebilmek ve sonuca göre üretim gamında aksiyon alabilmek için bir üretim yönetim yazılımı(MES) yapmaktayım.Aşagıya uygulamanın resimlerini bırakıyorum keyifli incelemeler dilerim!
 
 ## Anasayfa
