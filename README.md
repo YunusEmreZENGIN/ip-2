@@ -4,7 +4,11 @@ Herkese merhabalar.Bu projemde özellikle emek-yoğun fabrikalarda üretim hatla
 
 <p align="center"><a href="#" target="_blank"><img src="https://github.com/YunusEmreZENGIN/ip-2/blob/main/images/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202025-01-03%20123750.png" width="800" height="400" alt="Anasayfa"></a></p>
 
+Bu resimde gördüğünüz gibi ilk olarak anasayfayı koydum. Solda bir dropdown yapısı var.Karşınıza çıkan grafikte ise fabrikalarda operatörlerin yanlarında bulunan rover cihazlarına bağlı masanın altında bulunan rfıd okuyucuya okuttukları kartlardan gelen adetlerin verimlilik tablosunu görüyorsunuz.Bu verimlilik tablosu tüm bantın verimliliğini kapsamaktadır. 
 
+<p align="center"><a href="#" target="_blank"><img src="[https://github.com/YunusEmreZENGIN/ip-2/blob/main/images/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202025-01-03%20123750.png](https://github.com/YunusEmreZENGIN/ip-2/blob/main/images/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202025-01-03%20123758.png)" width="800" height="400" alt="Anasayfa"></a></p>
+
+Burda ise bantların toplama verimliliği ve kalite kontrolden gelen verilerin kalite yüzdelerini koydum.En sağdada bantın başından sonuna kadar geçen süre içerisinde toplam kaç adet (Bir pantolon üreten fabrikayı düşünürsek) pantolon çıktığını gösteren bir yapı bulunmaktadır.
 ## Learning Laravel
 
 Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
