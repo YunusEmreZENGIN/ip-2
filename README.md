@@ -8,34 +8,11 @@ Bu resimde gördüğünüz gibi ilk olarak anasayfayı koydum. Solda bir dropdow
 
 <p align="center"><a href="#" target="_blank"><img src="https://github.com/YunusEmreZENGIN/ip-2/blob/main/images/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202025-01-03%20123758.png" width="800" height="400" alt="Anasayfa"></a></p>
 
-Burda ise bantların toplama verimliliği ve kalite kontrolden gelen verilerin kalite yüzdelerini koydum.En sağdada bantın başından sonuna kadar geçen süre içerisinde toplam kaç adet (Bir pantolon üreten fabrikayı düşünürsek) pantolon çıktığını gösteren bir yapı bulunmaktadır.
-## Learning Laravel
+Burda ise bantların toplam verimliliği ve kalite kontrolden gelen verilerin kalite yüzdelerini koydum.En sağdada bantın başından sonuna kadar geçen süre içerisinde toplam kaç adet (Bir pantolon üreten fabrikayı düşünürsek) pantolon çıktığını gösteren bir yapı bulunmaktadır.
+## Adet Raporu
+<p align="center"><a href="#" target="_blank"><img src="https://github.com/YunusEmreZENGIN/ip-2/blob/main/images/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202025-01-03%20123816.png" width="800" height="400" alt="Anasayfa"></a></p>
+<p align="center"><a href="#" target="_blank"><img src="https://github.com/YunusEmreZENGIN/ip-2/blob/main/images/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202025-01-03%20123824.png" width="800" height="400" alt="Anasayfa"></a></p>
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
 
 ## Contributing
 
