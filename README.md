@@ -15,22 +15,13 @@ Burda ise bantların toplam verimliliği ve kalite kontrolden gelen verilerin ka
 Adet Raporu sayfasındada resimlerde gördüğünüz gibi roverlardan gelen verileri rapor olarak tutan bir sayfa yapısı bulunmaktadır.
 Sayfanın Sağından columns kısmından isterseniz columnları kapatıp açabilir istersenin sağdaki direk column yöneticisini 2 kere tıkladığınızda kapatabilirsiniz.Columnsun altındaki filters kısmından yada column adlarının yanında bulunan filterele ikonuyla filtreleme yapabilirsiniz.Ayrıca 2.resimde göründüğü gibi tablonun alt kısmında ne kadar kayıt olduğunu ve sağ altta bulunan toplam adet sayısını görebilirsiniz.
 
-## Contributing
+## Verim İzleme
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+<p align="center"><a href="#" target="_blank"><img src="https://github.com/YunusEmreZENGIN/ip-2/blob/main/images/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202025-01-03%20123838.png" width="800" height="400" alt="Anasayfa"></a></p>
+<p align="center"><a href="#" target="_blank"><img src="https://github.com/YunusEmreZENGIN/ip-2/blob/main/images/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202025-01-03%20123849.png" width="800" height="400" alt="Anasayfa"></a></p>
 
-## Code of Conduct
+Verim İzleme sayfasından ise rover cihazlardan gelen verimlilik verilerinin tutulduğu bir sayfadır.Bir önceki adet raporu saydaısındada bahsettiğim gibi burdada column ve filters seçenekleri mevcuttur.Eğer herhangi bir hücreye basar iseniz 2.resimdede göründüğü gibi o hücre satırın bilgileri gelmektedir.Ve ayrıca tablonun alt kısmında ise Toplam o bantta bulunan kişilerin Toplam gün süresini,Toplam gerçekleşen dakika (Makine veya diğer aksaklıklardan çıkılmış süre),Toplam kayıp Zaman ve bantta bulunan kişilerin Toplam ortalama verimliliğini görüntüleyebilirsiniz.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-=======
 # Uretim-Yonetim-Yazilimi-Projesi
 >>>>>>> e729c83b1e283119d6f57e002ed0314547355bfd
 =======
