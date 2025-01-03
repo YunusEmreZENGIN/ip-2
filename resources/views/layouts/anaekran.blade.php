@@ -15,12 +15,12 @@
             <div id="chart">
                 <script src="https://cdn.jsdelivr.net/npm/dayjs"></script>
                 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-                <!-- Dayjs ve quarter eklentisini yükle -->
+                <!-- Dayjs ve quarter eklentisi -->
                 <script src="https://cdn.jsdelivr.net/npm/dayjs@1.10.4/dayjs.min.js"></script>
                 <script src="https://cdn.jsdelivr.net/npm/dayjs@1.10.4/plugin/quarterOfYear.js"></script>
 
                 <script>
-                    // Dayjs plugin'ini etkinleştir
+                    
                     dayjs.extend(dayjs_plugin_quarterOfYear);
 
                     var options = {
@@ -43,14 +43,14 @@
                         yaxis: {
                             labels: {
                                 formatter: function(value) {
-                                    return value + "%"; // Y eksenindeki veriyi yüzde olarak göstermek
+                                    return value + "%";
                                 }
                             }
                         },
                         dataLabels: {
                             enabled: true,
                             formatter: function(val) {
-                                return val + "%"; // Çubuğun üstünde de yüzde gösterecek
+                                return val + "%"; 
                             },
                             style: {
                                 fontSize: '12px',
@@ -69,7 +69,7 @@
                             },
                             y: {
                                 formatter: function(value) {
-                                    return value + "%"; // Tooltipte de yüzde göstermek
+                                    return value + "%"; 
                                 }
                             }
                         },

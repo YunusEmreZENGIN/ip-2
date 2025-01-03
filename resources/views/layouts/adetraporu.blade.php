@@ -337,7 +337,7 @@
         function getRecordCount() {
             const allRows = [];
             gridOptions.api.forEachNode(function(node) {
-                allRows.push(node.data); // Tüm satır verilerini al
+                allRows.push(node.data); 
             });
             return allRows.length;
         }
@@ -345,7 +345,7 @@
         function getTotalQuantity() {
             const allRows = [];
             gridOptions.api.forEachNode(function(node) {
-                allRows.push(node.data); // Tüm satır verilerini al
+                allRows.push(node.data);
             });
             return allRows.reduce((total, row) => total + parseFloat(row.quantity || 0), 0);
         }
@@ -366,7 +366,7 @@
         }
 
         window.onload = function() {
-            updateFooterInfo(); // Sayfa yüklendiğinde bilgi güncellemesi yap
+            updateFooterInfo(); // Sayfa yüklendiğinde bilgi güncellemesi yapılsın
         };
         window.exportData = exportData;
     </script>
