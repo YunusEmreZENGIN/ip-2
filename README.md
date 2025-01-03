@@ -12,7 +12,8 @@ Burda ise bantların toplam verimliliği ve kalite kontrolden gelen verilerin ka
 ## Adet Raporu
 <p align="center"><a href="#" target="_blank"><img src="https://github.com/YunusEmreZENGIN/ip-2/blob/main/images/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202025-01-03%20123816.png" width="800" height="400" alt="Anasayfa"></a></p>
 <p align="center"><a href="#" target="_blank"><img src="https://github.com/YunusEmreZENGIN/ip-2/blob/main/images/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202025-01-03%20123824.png" width="800" height="400" alt="Anasayfa"></a></p>
-
+Adet Raporu sayfasındada resimlerde gördüğünüz gibi roverlardan gelen verileri rapor olarak tutan bir sayfa yapısı bulunmaktadır.
+Sayfanın Sağından columns kısmından isterseniz columnları kapatıp açabilir istersenin sağdaki direk column yöneticisini 2 kere tıkladığınızda kapatabilirsiniz.Columnsun altındaki filters kısmından yada column adlarının yanında bulunan filterele ikonuyla filtreleme yapabilirsiniz.Ayrıca 2.resimde göründüğü gibi tablonun alt kısmında ne kadaar kayıt olduğunu ve sağ altta buluna n toplam adet sayısını görebilrisiniz.
 
 ## Contributing
 
