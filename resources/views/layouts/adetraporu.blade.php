@@ -1,378 +1,211 @@
-@extends('index')
+@extends('index2')
 
-@section('main')
-    
-    <h1 class="page-title badge badge-success"> Adet Raporu</h1>
-    <div style="margin-bottom: 20px; margin-left:150px;">
-        <button class="btn btn-warning" style="margin-left:1210px; margin-bottom:20px;" onclick="exportData()">Dışa
-            Aktar</button>
-    </div>
-    <div id="myGrid" class="ag-theme-alpine" style="margin-left: 160px;height: 600px; width: 1300px;"></div>
-    <div class="page-end d-flex  p-3" style="margin-left:160px;">
-        <div id="recordCount" class="badge badge-pill bg-success">Kayıt Sayısı: 0</div>
-        <div id="totalQuantity" class="badge badge-pill bg-success" style="margin-left:1030px;">Toplam Adet: 0 </div>
+@section('main2')
+    <style>
+        body {
+            zoom: 80%;
+        }
+
+        .top {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .bottom {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .page-end {
+            justify-content: space-between;
+        }
+
+        .filter-container {
+            width: 320px;
+            margin-bottom: 20px;
+            border: 1px solid #dedede;
+            border-radius: 10px;
+        }
+
+        .filter-container select,
+        .filter-container input {
+            margin-bottom: 10px;
+        }
+
+        .table-section {
+            margin-top: 30px;
+        }
+
+        .export-btn-container {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <div class="container">
+        <div class="page-inner">
+            <div class="page-header">
+                <h3 class="fw-bold mb-3">Forms</h3>
+                <ul class="breadcrumbs mb-3">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active">Rfıd Kart Oluşturma</li>
+                </ul>
+                <h1 class="page-title badge badge-success">Adet Raporu</h1>
+            </div>
+
+            <div class="export-btn-container">
+                <button class="btn btn-warning" onclick="exportData()">Dışa Aktar</button>
+            </div>
+
+            <div class="page-content">
+                
+
+                <hr>
+
+                <div class="table-section table-responsive">
+                    <table id="tableAR" class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Tarih</th>
+                                <th>Cihaz ID</th>
+                                <th>Bant</th>
+                                <th>Üretim Siparişi No</th>
+                                <th>Müşteri Sipariş No</th>
+                                <th>Model Kodu</th>
+                                <th>Ürün</th>
+                                <th>Adı Soyadı</th>
+                                <th>Operasyon</th>
+                                <th>Adet</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody"></tbody>
+                    </table>
+                </div>
+
+                <div class="page-end d-flex p-3">
+                    <div id="recordCount" class="badge bg-success" style="margin-left: 730px;">Kayıt Sayısı: 0</div>
+                    <div id="totalQuantity" class="badge bg-success ms-auto">Toplam Adet: 0</div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script type="module">
-        import 'https://cdn.jsdelivr.net/npm/ag-grid-enterprise@32.3.3/dist/ag-grid-enterprise.min.js';
-
-        let gridApi;
-        const gridOptions = {
-            rowData: [{
-                    date: "24.03.2020",
-                    line: "DIKIM-1",
-                    productionOrder: "20033386",
-                    customerOrder: "3434",
-                    modelCode: "544095/ELYON",
-                    product: "ELYON",
-                    operator: "ALANUR TURAN",
-                    operation: "Askılık Kalıplama",
-                    quantity: "500",
-                }, {
-                    date: "24.03.2020",
-                    line: "DIKIM-2",
-                    productionOrder: "20033386",
-                    customerOrder: "3434",
-                    modelCode: "544095/ELYON",
-                    product: "ELYON",
-                    operator: "Stelnica Ovenavic",
-                    operation: "Askılık Kalıplama",
-                    quantity: "100",
-                }, {
-                    date: "24.03.2020",
-                    line: "DIKIM-1",
-                    productionOrder: "20033386",
-                    customerOrder: "3434",
-                    modelCode: "544095/ELYON",
-                    product: "ELYON",
-                    operator: "Aleyna Tilki",
-                    operation: "Askılık Çıma",
-                    quantity: "500",
-                },
-                {
-                    date: "24.03.2020",
-                    line: "DIKIM-1",
-                    productionOrder: "20033386",
-                    customerOrder: "3434",
-                    modelCode: "544095/ELYON",
-                    product: "ELYON",
-                    operator: "Valentina Cvetkovic",
-                    operation: "Askılık Çıma",
-                    quantity: "500",
-                }, {
-                    date: "24.03.2020",
-                    line: "DIKIM-1",
-                    productionOrder: "20033386",
-                    customerOrder: "3434",
-                    modelCode: "544095/ELYON",
-                    product: "ELYON",
-                    operator: "Arif Işık",
-                    operation: "Askılık Çıma",
-                    quantity: "500",
-                },
-                {
-                    date: "24.03.2020",
-                    line: "DIKIM-1",
-                    productionOrder: "20033386",
-                    customerOrder: "3434",
-                    modelCode: "544095/ELYON",
-                    product: "ELYON",
-                    operator: "Volkan Demirel",
-                    operation: "Askılık Çıma",
-                    quantity: "500",
-                },
-                {
-                    date: "24.03.2020",
-                    line: "DIKIM-1",
-                    productionOrder: "20033386",
-                    customerOrder: "3434",
-                    modelCode: "544095/ELYON",
-                    product: "ELYON",
-                    operator: "Tülay Babar",
-                    operation: "Askılık Çıma",
-                    quantity: "500",
-                },
-                {
-                    date: "24.03.2020",
-                    line: "DIKIM-1",
-                    productionOrder: "20033386",
-                    customerOrder: "3434",
-                    modelCode: "544095/ELYON",
-                    product: "ELYON",
-                    operator: "Sinan Boz",
-                    operation: "Askılık Çıma",
-                    quantity: "500",
-                },
-                {
-                    date: "24.03.2020",
-                    line: "DIKIM-1",
-                    productionOrder: "20033386",
-                    customerOrder: "3434",
-                    modelCode: "544095/ELYON",
-                    product: "ELYON",
-                    operator: "Sinan Hacıoğlu ",
-                    operation: "Askılık Çıma",
-                    quantity: "500",
-                },
-                {
-                    date: "24.03.2020",
-                    line: "DIKIM-1",
-                    productionOrder: "20033386",
-                    customerOrder: "3434",
-                    modelCode: "544095/ELYON",
-                    product: "ELYON",
-                    operator: "Servet Karasu",
-                    operation: "Askılık Çıma",
-                    quantity: "500",
-                },
-                {
-                    date: "24.03.2020",
-                    line: "DIKIM-1",
-                    productionOrder: "20033386",
-                    customerOrder: "3434",
-                    modelCode: "544095/ELYON",
-                    product: "ELYON",
-                    operator: "Senem Arslan",
-                    operation: "Askılık Çıma",
-                    quantity: "500",
-                },
-                {
-                    date: "24.03.2020",
-                    line: "DIKIM-1",
-                    productionOrder: "20033386",
-                    customerOrder: "3434",
-                    modelCode: "544095/ELYON",
-                    product: "ELYON",
-                    operator: "Seda Gündüz",
-                    operation: "Askılık Çıma",
-                    quantity: "500",
-                },
-                {
-                    date: "24.03.2020",
-                    line: "DIKIM-1",
-                    productionOrder: "20033386",
-                    customerOrder: "3434",
-                    modelCode: "544095/ELYON",
-                    product: "ELYON",
-                    operator: "Recep Aydın",
-                    operation: "Askılık Çıma",
-                    quantity: "500",
-                },
-                {
-                    date: "24.03.2020",
-                    line: "DIKIM-1",
-                    productionOrder: "20033386",
-                    customerOrder: "3434",
-                    modelCode: "544095/ELYON",
-                    product: "ELYON",
-                    operator: "Melek Gülmez",
-                    operation: "Askılık Çıma",
-                    quantity: "500",
-                }, {
-                    date: "24.03.2020",
-                    line: "DIKIM-1",
-                    productionOrder: "20033386",
-                    customerOrder: "3434",
-                    modelCode: "544095/ELYON",
-                    product: "ELYON",
-                    operator: "Mahmut Tuncer",
-                    operation: "Askılık Çıma",
-                    quantity: "500",
-                }, {
-                    date: "24.03.2020",
-                    line: "DIKIM-1",
-                    productionOrder: "20033386",
-                    customerOrder: "3434",
-                    modelCode: "544095/ELYON",
-                    product: "ELYON",
-                    operator: "İrem Sarı",
-                    operation: "Askılık Çıma",
-                    quantity: "500",
-                },
-                {
-                    date: "24.03.2020",
-                    line: "DIKIM-1",
-                    productionOrder: "20033386",
-                    customerOrder: "3434",
-                    modelCode: "544095/ELYON",
-                    product: "ELYON",
-                    operator: "Gökhan Erdoğan",
-                    operation: "Askılık Çıma",
-                    quantity: "500",
-                },
-                {
-                    date: "24.03.2020",
-                    line: "DIKIM-1",
-                    productionOrder: "20033386",
-                    customerOrder: "3434",
-                    modelCode: "544095/ELYON",
-                    product: "ELYON",
-                    operator: "Furkan Karaman",
-                    operation: "Askılık Çıma",
-                    quantity: "500",
-                },
-                {
-                    date: "24.03.2020",
-                    line: "DIKIM-1",
-                    productionOrder: "20033386",
-                    customerOrder: "3434",
-                    modelCode: "544095/ELYON",
-                    product: "ELYON",
-                    operator: "Filiz Yılmaz",
-                    operation: "Askılık Çıma",
-                    quantity: "500",
-                },
-                {
-                    date: "24.03.2020",
-                    line: "DIKIM-3",
-                    productionOrder: "20033386",
-                    customerOrder: "3434",
-                    modelCode: "544095/ELYON",
-                    product: "ELYON",
-                    operator: "Fazilet Emre",
-                    operation: "Askılık Çıma",
-                    quantity: "500",
-                }
-            ],
-            columnDefs: [{
-                headerName: "Tarih",
-                field: "date",
-                filter: "agDateColumnFilter",
-                flex: 1,
-                filterParams: {
-                    caseSensitive: false,
-                },
-            }, {
-                headerName: "Bant",
-                field: "line",
-                filter: "agTextColumnFilter",
-                flex: 1,
-                filterParams: {
-                    caseSensitive: false,
-                },
-            }, {
-                headerName: "Üretim Siparişi",
-                filter: "agTextColumnFilter",
-                field: "productionOrder",
-                flex: 1,
-                filterParams: {
-                    caseSensitive: false,
-                },
-            }, {
-                headerName: "Müşteri Sipariş No",
-                filter: "agTextColumnFilter",
-                field: "customerOrder",
-                flex: 1,
-                filterParams: {
-                    caseSensitive: false,
-                },
-            }, {
-                headerName: "Model Kodu",
-                filter: "agTextColumnFilter",
-                field: "modelCode",
-                flex: 1,
-                filterParams: {
-                    caseSensitive: false,
-                },
-            }, {
-                headerName: "Ürün",
-                filter: "agTextColumnFilter",
-                field: "product",
-                flex: 1,
-                filterParams: {
-                    caseSensitive: false,
-                },
-            }, {
-                headerName: "Adı Soyadı",
-                filter: "agTextColumnFilter",
-                field: "operator",
-                flex: 1,
-                filterParams: {
-                    caseSensitive: false,
-                },
-            }, {
-                headerName: "Operasyon",
-                filter: "agTextColumnFilter",
-                field: "operation",
-                flex: 1,
-                filterParams: {
-                    caseSensitive: false,
-                },
-            }, {
-                headerName: "Adet",
-                filter: "agTextColumnFilter",
-                field: "quantity",
-                flex: 1,
-                filterParams: {
-                    caseSensitive: false,
-                },
-            }],
-            pagination: true,
-            paginationPageSize: 15,
-            paginationPageSizeSelector: [10, 20, 25, 30, 50, 75],
-            sideBar: true,
-        };
-
-        document.addEventListener("DOMContentLoaded", function() {
-            const gridDiv = document.querySelector("#myGrid");
-            const gridInstance = new agGrid.Grid(gridDiv,gridOptions);
-            gridApi = gridOptions.api; 
-            
-            gridOptions.api.addEventListener("firstDataRendered", function() {
-                updateRecordCount();
-            });
+        document.addEventListener('DOMContentLoaded', () => {
+            loadDataWithFetch();
         });
 
-        function exportData() {
-            if (!gridApi) {
-                alert("Grid api bulunamadı");
-                return;
+        function loadDataWithFetch() {
+            fetch('/getData')
+                .then(response => {
+                    if (!response.ok) throw new Error('Veri çekme hatası');
+                    return response.json();
+                })
+                .then(data => {
+                    console.log("Veri alındı:", data);
+                    if (data.length === 0) {
+                        $('#tableAR').DataTable().clear().draw(); // Tabloda veri yoksa temizle
+                        document.getElementById('recordCount').textContent = "Kayıt Sayısı: 0";
+                        document.getElementById('totalQuantity').textContent = "Toplam Adet: 0";
+                        console.log("Veri bulunamadı.");
+                    } else {
+                        populateTable(data);
+                    }
+                })
+                .catch(error => {
+                    console.error("Hata:", error);
+                    alert("Veri yüklenirken hata oluştu.");
+                });
+        }
+
+        function populateTable(data) {
+            const tbody = document.getElementById('tableBody');
+            tbody.innerHTML = data.map(item => `
+                <tr>
+                    <td>${item.date}</td>
+                    <td>${item.device_id}</td>
+                    <td>${item.line}</td>
+                    <td>${item.productionOrder}</td>
+                    <td>${item.customerOrder}</td>
+                    <td>${item.modelCode}</td>
+                    <td>${item.product}</td>
+                    <td>${item.operator}</td>
+                    <td>${item.operation}</td>
+                    <td>${item.quantity}</td>
+                </tr>
+            `).join('');
+
+            // DataTable'ı düzgün şekilde yeniden başlat
+            if ($.fn.DataTable.isDataTable('#tableAR')) {
+                $('#tableAR').DataTable().clear().destroy();
             }
-            gridApi.exportDataAsExcel({
-                filename: 'Üretim Raporları.xlsx',
-                sheetname: 'Üretim Raporları',
+
+            $('#tableAR').DataTable({
+                lengthMenu: [
+                    [10, 25, 50, 75, -1],
+                    ['10 Adet', '25 Adet', '50 Adet', '75 Adet', 'Tümü']
+                ],
+                order: [
+                    [0, 'desc']
+                ],
+                sDom: '<"top"lBf>rt<"bottom"ip><"clear">',
+                buttons: ['copy', 'excel', 'pdf', 'csv']
             });
+
+            updateFooterInfo(data);
         }
 
-        function getRecordCount() {
-            const allRows = [];
-            gridOptions.api.forEachNode(function(node) {
-                allRows.push(node.data); 
-            });
-            return allRows.length;
-        }
+        function updateFooterInfo(data) {
+            const recordCount = data.length;
+            const totalQuantity = data.reduce((sum, item) => sum + parseFloat(item.quantity || 0), 0);
 
-        function getTotalQuantity() {
-            const allRows = [];
-            gridOptions.api.forEachNode(function(node) {
-                allRows.push(node.data);
-            });
-            return allRows.reduce((total, row) => total + parseFloat(row.quantity || 0), 0);
-        }
-
-        function updateRecordCount() {
-            const rowCount = getRecordCount();
-            document.getElementById('recordCount').textContent = `Kayıt Sayısı: ${rowCount}`;
-        }
-
-        function updateTotalQuantity() {
-            const totalQuantity = getTotalQuantity();
+            document.getElementById('recordCount').textContent = `Kayıt Sayısı: ${recordCount}`;
             document.getElementById('totalQuantity').textContent = `Toplam Adet: ${totalQuantity}`;
         }
 
-        function updateFooterInfo() {
-            updateRecordCount();
-            updateTotalQuantity();
+        function applyLineFilter() {
+            const filterParams = {
+                line: document.getElementById('lineFilter').value !== 'Bant' ? document.getElementById('lineFilter').value : '',
+                productionOrder: document.getElementById('productionOrderFilter').value !== 'Üretim Sipariş No' ? document.getElementById('productionOrderFilter').value : '',
+                customerOrder: document.getElementById('customerOrderFilter').value !== 'Müşteri Sipariş No' ? document.getElementById('customerOrderFilter').value : '',
+                product: document.getElementById('productFilter').value !== 'Ürün' ? document.getElementById('productFilter').value : '',
+                modelCode: document.getElementById('modelCodeFilter').value !== 'Model Kodu' ? document.getElementById('modelCodeFilter').value : '',
+                date: document.getElementById('startedDateFilter').value
+            };
+
+            const queryString = new URLSearchParams(filterParams).toString();
+            console.log("Filtre URL Parametreleri:", queryString); // Filtre parametrelerini kontrol et
+
+            fetch(`/getData?${queryString}`)
+                .then(response => {
+                    if (!response.ok) throw new Error('Filtreli veri çekme hatası');
+                    return response.json();
+                })
+                .then(data => {
+                    if (data.length === 0) {
+                        $('#tableAR').DataTable().clear().draw();
+                        document.getElementById('recordCount').textContent = "Kayıt Sayısı: 0";
+                        document.getElementById('totalQuantity').textContent = "Toplam Adet: 0";
+                        console.log("Filtrele sonrası veri bulunamadı.");
+                    } else {
+                        populateTable(data);
+                    }
+                })
+                .catch(error => {
+                    console.error("Hata:", error);
+                    alert("Filtreleme sırasında hata oluştu.");
+                });
         }
 
-        window.onload = function() {
-            updateFooterInfo(); // Sayfa yüklendiğinde bilgi güncellemesi yapılsın
+        window.exportData = function() {
+            console.log("Dışa aktarılıyor...");
+            // Buraya dışa aktarma işlemi eklenebilir, örneğin CSV veya Excel formatı
+            alert("Dışa aktarım özelliği şu anda eklenmemiştir.");
         };
-        window.exportData = exportData;
-    </script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ag-grid/32.3.3/ag-grid-community.min.js"
-        integrity="sha512-fD9MUUcwwAe0W4Qj+wis2c6GNIAIAgxkGiVNYa3ZZH+7uKdjPIU+VZ7wXffl4eLda4rVAIfxEqeO2Q0+4+w/Kw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="{{ asset('js/main.js') }}"></script>
+        window.applyLineFilter = applyLineFilter;
+    </script>
 @endsection

@@ -26,18 +26,5 @@ class ChartsController extends Controller
         ]);
     }
 
-    public function calculateAdetPercentage(Request $request)
-    {
-        $expectedTotal = $request->input('expectedTotal', 6000);
-        $rovers = RoverModel::all();
-
-        $processedTotal = $rovers->sum('processed_units');
-        $adetPercentage = $expectedTotal > 0 ? (($processedTotal / $expectedTotal) * 100) : 0;
-
-        return response()->json([
-            'processedTotal' => $processedTotal,
-            'expectedTotal' => $expectedTotal,
-            'adetPercentage' => round($adetPercentage, 2),
-        ]);
-    }
+ 
 }

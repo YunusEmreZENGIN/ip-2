@@ -6,32 +6,58 @@
     <title>Veri Gönderme</title>
 </head>
 <body>
-<thread>
-    <th>
-        <th>#</th>
-        <th>Rover ID</th>
-        <th>Operator ID</th>
-        <th>Bundle ID</th>
-        <th>Operasyon Adı</th>
-        <th>Zaman</th>
 
-    </th>
-
-</thread>
-<tbody>
-    @foreach($rovers as $rover)
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.5/css/jquery.dataTables.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
+    
+    <div id="filter-container">
+      <label>Ürün:
+        <input type="text" id="filter-product">
+      </label>
+      <label>Miktar:
+        <input type="number" id="filter-quantity">
+      </label>
+      <button id="apply-filters">Filtrele</button>
+    </div>
+    
+    <table id="example" class="display">
+      <thead>
         <tr>
-            <td>{{$rover->id}}</td>
-            <td>{{$rover->rover_id}}</td>
-            <td>{{$rover->operator_id}}</td>
-            <td>{{$rover->bundle_id}}</td>
-            <td>{{$rover->operations_name}}</td>
-            <td>{{$rover->created_at}}</td>
-            <td>{{$rover->updated_at}}</td>
+          <th>Ürün</th>
+          <th>Miktar</th>
         </tr>
-    @endforeach
-
-</tbody>
-
+      </thead>
+      <tbody>
+        <tr><td>Tişört</td><td>150</td></tr>
+        <tr><td>Pantolon</td><td>300</td></tr>
+        <tr><td>Ayakkabı</td><td>50</td></tr>
+        <tr><td>Ceket</td><td>200</td></tr>
+      </tbody>
+    </table>
+    
+    <script>
+      $(document).ready(function () {
+        const table = $("#example").DataTable();
+    
+        $("#apply-filters").on("click", function () {
+          const productFilter = $("#filter-product").val().toLowerCase();
+          const quantityFilter = parseInt($("#filter-quantity").val());
+    
+          table.rows().every(function () {
+            const data = this.data();
+            const matchesProduct = data[0].toLowerCase().includes(productFilter);
+            const matchesQuantity = !quantityFilter || parseInt(data[1]) >= quantityFilter;
+    
+            if (matchesProduct && matchesQuantity) {
+              $(this.node()).show();
+            } else {
+              $(this.node()).hide();
+            }
+          });
+        });
+      });
+    </script>
+    
 </body>
 </html>
